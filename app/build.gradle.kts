@@ -1,6 +1,11 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+
+    id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
+
+    kotlin("plugin.serialization") version "1.9.0"
 }
 
 android {
@@ -30,11 +35,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "18"
     }
     buildFeatures {
         compose = true
@@ -66,4 +71,76 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    val accompanist_version = "0.27.0"
+    val ktor_version = "2.3.7"
+
+    //Architecture
+    implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+    //Accompanist
+    implementation("com.google.accompanist:accompanist-navigation-animation:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-pager:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-pager-indicators:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-placeholder:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-swiperefresh:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanist_version")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.1.0")
+
+    //Dagger - Hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    ksp("com.google.dagger:hilt-android-compiler:2.48.1")
+    ksp("androidx.hilt:hilt-compiler:1.1.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+
+    //DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    //Firebase
+    implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
+    implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
+
+    //Google Auth
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+    //Google Maps
+    implementation("com.google.maps.android:maps-compose:2.5.3")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+
+    //Gson
+    implementation("com.google.code.gson:gson:2.10")
+
+    //Logback
+    implementation("ch.qos.logback:logback-classic:1.2.1") //1.2.1
+
+    //Ktor
+    implementation("io.ktor:ktor-client-core:2.3.7")
+    implementation("io.ktor:ktor-client-android:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-client-serialization:$ktor_version")
+    implementation("io.ktor:ktor-client-logging:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+
+    //Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+
+    //Room
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.room:room-paging:2.6.1")
+    implementation("androidx.room:room-runtime:$2.6.1")
+
+    //Runtime compose
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
+
+    //Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+    //Splash api
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }
