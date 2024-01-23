@@ -1,5 +1,9 @@
-package com.premierdarkcoffee.hermes.features.home.domain.model
+package com.premierdarkcoffee.maia.features.home.domain.model
 
+import com.premierdarkcoffee.maia.features.home.domain.model.Images
+import com.premierdarkcoffee.maia.features.home.domain.model.Information
+import com.premierdarkcoffee.maia.features.home.domain.model.Offer
+import com.premierdarkcoffee.maia.features.home.domain.model.Price
 import kotlinx.serialization.Serializable
 
 @Serializable
