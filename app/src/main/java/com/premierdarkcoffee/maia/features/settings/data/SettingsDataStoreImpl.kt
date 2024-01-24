@@ -1,4 +1,4 @@
-package com.premierdarkcoffee.hermes.features.settings.data
+package com.premierdarkcoffee.maia.features.settings.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -6,7 +6,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
-import com.premierdarkcoffee.hermes.features.settings.domain.SettingsDataStore
+import com.premierdarkcoffee.maia.features.settings.domain.SettingsDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
