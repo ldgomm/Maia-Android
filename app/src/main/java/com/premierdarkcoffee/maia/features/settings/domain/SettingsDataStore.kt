@@ -1,4 +1,4 @@
-package com.premierdarkcoffee.hermes.features.settings.domain
+package com.premierdarkcoffee.maia.features.settings.domain
 
 import kotlinx.coroutines.flow.Flow
 
