@@ -1,6 +1,6 @@
-package com.premierdarkcoffee.hermes.features.settings.domain.use_case
+package com.premierdarkcoffee.maia.features.settings.domain.use_case
 
-import com.premierdarkcoffee.hermes.features.settings.domain.SettingsDataStore
+import com.premierdarkcoffee.maia.features.settings.domain.SettingsDataStore
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
