@@ -1,4 +1,4 @@
-package com.premierdarkcoffee.hermes.features.settings.presentation.settings_screen
+package com.premierdarkcoffee.maia.features.settings.presentation.settings_screen
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
