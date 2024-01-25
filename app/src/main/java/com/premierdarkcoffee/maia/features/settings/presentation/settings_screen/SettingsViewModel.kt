@@ -1,9 +1,9 @@
-package com.premierdarkcoffee.hermes.features.settings.presentation.settings_screen
+package com.premierdarkcoffee.maia.features.settings.presentation.settings_screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.premierdarkcoffee.hermes.features.settings.domain.use_case.GetDarkThemeUseCase
-import com.premierdarkcoffee.hermes.features.settings.domain.use_case.SaveDarkThemeUseCase
+import com.premierdarkcoffee.maia.features.settings.domain.use_case.GetDarkThemeUseCase
+import com.premierdarkcoffee.maia.features.settings.domain.use_case.SaveDarkThemeUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
