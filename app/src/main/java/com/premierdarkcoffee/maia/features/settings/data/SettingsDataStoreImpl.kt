@@ -17,6 +17,10 @@ class SettingsDataStoreImpl @Inject constructor(context: Context) : SettingsData
 
     private val dataStore = context.settingsDataStore
 
+    companion object {
+        private val KEY_IS_DARK_THEME = booleanPreferencesKey("key_is_dark_theme")
+    }
+
     override val isDarkTheme: Flow<Boolean?> = dataStore.data.map { preferences ->
         preferences[KEY_IS_DARK_THEME]
     }
@@ -25,9 +29,5 @@ class SettingsDataStoreImpl @Inject constructor(context: Context) : SettingsData
         dataStore.edit { preferences ->
             preferences[KEY_IS_DARK_THEME] = isDarkTheme
         }
-    }
-
-    companion object {
-        private val KEY_IS_DARK_THEME = booleanPreferencesKey("key_is_dark_theme")
     }
 }

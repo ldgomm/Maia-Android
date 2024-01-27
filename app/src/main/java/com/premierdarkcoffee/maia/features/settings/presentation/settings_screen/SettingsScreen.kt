@@ -21,14 +21,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 @Composable
 fun SettingsScreen() {
-
     val viewModel: SettingsViewModel = hiltViewModel()
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
 
     SettingsScreenContent(isDarkTheme = uiState.value.isDarkTheme ?: isSystemInDarkTheme(), onDarkModeToggled = {
         viewModel.onEvent(SettingsEvent.DarkModeToggled(it))
     })
-
 }
 
 @Composable
@@ -55,9 +53,6 @@ fun DarkModeSwitch(isDarkTheme: Boolean, onDarkModeToggled: (Boolean) -> Unit, m
         Spacer(modifier = Modifier.width(12.dp))
 //        Text(text = stringResource(id = R.string.dark_mode))
         Spacer(modifier = Modifier.weight(1f))
-        Switch(
-                checked = isDarkTheme,
-                onCheckedChange = onDarkModeToggled,
-        )
+        Switch(checked = isDarkTheme, onCheckedChange = onDarkModeToggled)
     }
 }
